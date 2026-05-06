@@ -1,4 +1,12 @@
 import { Button } from "@mantine/core";
+import {
+  PiPaperPlaneTilt,
+  PiEnvelopeSimple,
+  PiPhone,
+  PiLinkedinLogo,
+  PiGithubLogo,
+  PiFileText,
+} from "react-icons/pi";
 import { contact } from "@/data/portfolio";
 import Reveal from "./Reveal";
 
@@ -16,13 +24,11 @@ export default function Contact() {
       id="contact"
       className="relative overflow-hidden pt-28 pb-6 px-6 text-brand-ink scroll-mt-20"
     >
-      <span className="absolute top-16 right-[15%] text-3xl animate-float-y">💌</span>
-      <span className="absolute bottom-24 left-[10%] text-3xl animate-float-y" style={{ animationDelay: "1.5s" }}>☕</span>
-      <span className="absolute top-1/2 left-[8%] text-2xl animate-spin-slow">✨</span>
 
       <div className="relative max-w-3xl mx-auto text-center">
         <Reveal>
-          <p className="font-hand text-3xl text-brand-pink rotate-2 inline-block">
+          <p className="font-hand text-3xl text-brand-pink rotate-2 inline-flex items-center gap-2">
+            <PiPaperPlaneTilt className="text-brand-violet" />
             ~ the let&apos;s-be-friends part ~
           </p>
           <h2 className="mt-3 text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
@@ -51,75 +57,79 @@ export default function Contact() {
         <Reveal delay={150}>
           <p className="mt-6 text-brand-ink/70 text-lg max-w-xl mx-auto">
             I&apos;m always up for interesting frontend work, friendly chats,
-            or just nerding out over tiny UI details. My inbox is open 💌
+            or just nerding out over tiny UI details. My inbox is open.
           </p>
         </Reveal>
 
         <Reveal delay={300}>
-          <div className="mt-10 flex flex-wrap justify-center gap-3">
-            <Button
-              component="a"
-              href={`mailto:${contact.email}`}
-              size="md"
-              radius={0}
-              color="pink"
-              styles={linkButtonStyles}
-            >
-              ✉ {contact.email}
-            </Button>
-            <Button
-              component="a"
-              href={`tel:${contact.phone.replace(/\s|-/g, "")}`}
-              size="md"
-              radius={0}
-              color="violet"
-              styles={linkButtonStyles}
-            >
-              📞 {contact.phone}
-            </Button>
-            <Button
-              component="a"
-              href={contact.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              size="md"
-              radius={0}
-              variant="white"
-              color="dark"
-              styles={linkButtonStyles}
-            >
-              💼 LinkedIn
-            </Button>
-            <Button
-              component="a"
-              href={contact.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              size="md"
-              radius={0}
-              variant="outline"
-              color="gray"
-              styles={{
-                root: {
-                  ...linkButtonStyles.root,
-                  borderColor: "rgba(30,27,58,0.25)",
-                  color: "#1e1b3a",
-                },
-              }}
-            >
-              🐙 GitHub
-            </Button>
+          <div className="mt-10 mx-auto flex flex-col items-center gap-3">
+            <div className="flex flex-wrap justify-center gap-3">
+              <Button
+                component="a"
+                href={`mailto:${contact.email}`}
+                size="md"
+                radius="md"
+                color="pink"
+                styles={linkButtonStyles}
+              >
+                <PiEnvelopeSimple className="inline mr-2" />{contact.email}
+              </Button>
+              <Button
+                component="a"
+                href={`tel:${contact.phone.replace(/\s|-/g, "")}`}
+                size="md"
+                radius="md"
+                color="violet"
+                styles={linkButtonStyles}
+              >
+                <PiPhone className="inline mr-2" />{contact.phone}
+              </Button>
+            </div>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Button
+                component="a"
+                href={contact.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                size="md"
+                radius="md"
+                variant="white"
+                color="dark"
+                styles={linkButtonStyles}
+              >
+                <PiLinkedinLogo className="inline mr-2" />LinkedIn
+              </Button>
+              <Button
+                component="a"
+                href={contact.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                size="md"
+                radius="md"
+                variant="outline"
+                color="gray"
+                styles={{
+                  root: {
+                    ...linkButtonStyles.root,
+                    borderColor: "rgba(30,27,58,0.25)",
+                    color: "#1e1b3a",
+                  },
+                }}
+              >
+                <PiGithubLogo className="inline mr-2" />GitHub
+              </Button>
+            </div>
             <Button
               component="a"
               href={contact.resume}
               target="_blank"
               rel="noopener noreferrer"
               size="md"
-              radius={0}
+              radius="md"
               color="grape"
               styles={linkButtonStyles}
             >
-              📄 Resume
+              <PiFileText className="inline mr-2" />Download Resume
             </Button>
           </div>
         </Reveal>

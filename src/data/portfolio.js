@@ -69,6 +69,8 @@ export const skills = [
       "PDF.js",
       "Canvas API",
       "WebRTC / MediaDevices",
+      "Agora RTC / RTM",
+      "Google Maps API",
       "Fabric.js",
       "Paper.js",
     ],
@@ -111,7 +113,8 @@ export const experience = [
     location: "Remote",
     period: "2020 – 2022  ·  ~2 years (until acquisition)",
     bullets: [
-      "Built real-time communication features using Agora RTM and Agora RTC for live audio/video interactions.",
+      "Real-time communication — built live audio/video sessions and in-app chat using Agora RTC and Agora RTM, including a command-style messaging layer (RTM channel commands) for synchronised UI actions between participants.",
+      "Google Maps API integration — embedded interactive maps with custom markers, geolocation, and place search for location-based travel features.",
       "Integrated Firebase for authentication, realtime data, and backend services.",
     ],
   },

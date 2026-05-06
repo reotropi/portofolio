@@ -1,3 +1,4 @@
+import { PiMapPin, PiBriefcase, PiCaretRightBold } from "react-icons/pi";
 import { experience } from "@/data/portfolio";
 import Reveal from "./Reveal";
 
@@ -9,7 +10,6 @@ const noteColors = [
 
 const tapeColors = ["bg-brand-violet/60", "bg-brand-pink/60", "bg-brand-purple/60"];
 const tilts = ["tilt-l", "tilt-r", "tilt-l"];
-const emojis = ["💼", "✈️", "🌱"];
 
 const bulletAccents = [
   "border-brand-pink",
@@ -33,7 +33,8 @@ export default function Experience() {
 
       <div className="relative max-w-5xl mx-auto">
         <Reveal>
-          <p className="font-hand text-3xl text-brand-violet rotate-1 inline-block">
+          <p className="font-hand text-3xl text-brand-violet rotate-1 inline-flex items-center gap-2">
+            <PiBriefcase className="text-brand-pink" />
             ~ the work history bit ~
           </p>
           <h2 className="mt-2 text-4xl md:text-6xl font-extrabold tracking-tight">
@@ -54,8 +55,7 @@ export default function Experience() {
                   strokeLinecap="round"
                 />
               </svg>
-            </span>{" "}
-            ✏️
+            </span>
           </h2>
         </Reveal>
 
@@ -70,7 +70,6 @@ export default function Experience() {
                 />
 
                 <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                  <span className="text-3xl mr-1">{emojis[i % emojis.length]}</span>
                   <h3 className="text-2xl md:text-3xl font-extrabold text-brand-ink">
                     {job.role}
                   </h3>
@@ -79,10 +78,10 @@ export default function Experience() {
                   </span>
                 </div>
                 <p className="font-hand text-xl text-brand-ink/60 mt-1">
-                  📍 {job.location} · {job.period}
+                  <PiMapPin className="inline mr-1" /> {job.location} · {job.period}
                 </p>
 
-                <ul className="mt-5 space-y-2 text-brand-ink/85">
+                <ul className="mt-6 space-y-4 text-brand-ink/85">
                   {job.bullets.map((b, idx) => {
                     const dashIdx = b.indexOf(" — ");
                     const hasHeadline = dashIdx !== -1;
@@ -92,16 +91,20 @@ export default function Experience() {
                     return (
                       <li
                         key={idx}
-                        className={`group relative pl-4 pr-3 py-2 border-l-[3px] ${accent} leading-relaxed hover:bg-white/40 transition-colors duration-200`}
+                        className={`group relative pl-5 pr-3 py-3 border-l-[3px] ${accent} bg-white/30 hover:bg-white/60 transition-colors duration-200`}
                       >
+                        <PiCaretRightBold className="absolute -left-[9px] top-4 text-brand-pink bg-white rounded-full" />
                         {hasHeadline ? (
                           <>
-                            <span className="font-bold text-brand-violet">{headline}</span>
-                            <span className="text-brand-pink font-bold mx-1">—</span>
-                            <span>{detail}</span>
+                            <p className="font-bold text-brand-violet text-base md:text-lg leading-snug">
+                              {headline}
+                            </p>
+                            <p className="mt-1.5 leading-relaxed text-brand-ink/80">
+                              {detail}
+                            </p>
                           </>
                         ) : (
-                          <span>{detail}</span>
+                          <p className="leading-relaxed">{detail}</p>
                         )}
                       </li>
                     );

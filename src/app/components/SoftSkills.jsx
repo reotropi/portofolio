@@ -1,4 +1,5 @@
 import { Badge } from "@mantine/core";
+import { PiUsersThree } from "react-icons/pi";
 import { softSkills } from "@/data/portfolio";
 import Reveal from "./Reveal";
 
@@ -7,12 +8,12 @@ export default function SoftSkills() {
     <section id="soft-skills" className="relative py-20 px-6 scroll-mt-20">
       <div className="max-w-4xl mx-auto">
         <Reveal>
-          <p className="font-hand text-3xl text-brand-pink rotate-1 inline-block">
+          <p className="font-hand text-3xl text-brand-pink rotate-1 inline-flex items-center gap-2">
+            <PiUsersThree className="text-brand-violet" />
             ~ and the people-y stuff ~
           </p>
           <h3 className="mt-2 text-3xl md:text-4xl font-extrabold tracking-tight">
-            how I show up for the team{" "}
-            <span className="inline-block animate-float-y" style={{ animationDelay: "0.6s" }}>🤝</span>
+            how I show up for the team
           </h3>
         </Reveal>
 

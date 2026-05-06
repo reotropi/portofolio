@@ -1,11 +1,12 @@
+import { PiNotePencil, PiMicrophone, PiCamera, PiHandshake, PiRocketLaunch } from "react-icons/pi";
 import { projects } from "@/data/portfolio";
 import Reveal from "./Reveal";
 
 const accentMap = {
-  pink:   { bg: "bg-brand-pink",   soft: "bg-brand-pink/15",     text: "text-brand-pink",   emoji: "📝" },
-  purple: { bg: "bg-brand-purple", soft: "bg-brand-purple/20",   text: "text-brand-violet", emoji: "🎤" },
-  rose:   { bg: "bg-brand-rose",   soft: "bg-brand-rose/30",     text: "text-brand-pink",   emoji: "📸" },
-  violet: { bg: "bg-brand-violet", soft: "bg-brand-lavender",    text: "text-brand-violet", emoji: "🤝" },
+  pink:   { bg: "bg-brand-pink",   soft: "bg-brand-pink/15",     text: "text-brand-pink",   Icon: PiNotePencil },
+  purple: { bg: "bg-brand-purple", soft: "bg-brand-purple/20",   text: "text-brand-violet", Icon: PiMicrophone },
+  rose:   { bg: "bg-brand-rose",   soft: "bg-brand-rose/30",     text: "text-brand-pink",   Icon: PiCamera },
+  violet: { bg: "bg-brand-violet", soft: "bg-brand-lavender",    text: "text-brand-violet", Icon: PiHandshake },
 };
 
 const tilts = ["-rotate-1", "rotate-1", "rotate-1", "-rotate-1"];
@@ -24,12 +25,12 @@ export default function Projects() {
 
       <div className="relative max-w-6xl mx-auto">
         <Reveal>
-          <p className="font-hand text-3xl text-brand-pink -rotate-2 inline-block drop-shadow">
+          <p className="font-hand text-3xl text-brand-pink -rotate-2 inline-flex items-center gap-2 drop-shadow">
+            <PiRocketLaunch className="text-brand-violet" />
             ~ stuff I&apos;ve built ~
           </p>
           <h2 className="mt-2 text-4xl md:text-6xl font-extrabold tracking-tight">
-            a few favorites{" "}
-            <span className="inline-block animate-float-y">💖</span>
+            a few favorites
           </h2>
           <p className="mt-3 font-hand text-2xl text-brand-ink/60">
             (the ones I&apos;m secretly proud of)
@@ -50,7 +51,7 @@ export default function Projects() {
                   <div
                     className={`absolute -top-5 -right-5 w-20 h-20 ${a.bg} flex items-center justify-center text-4xl group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300 shadow-md`}
                   >
-                    {a.emoji}
+                    <a.Icon className="text-white" />
                   </div>
 
                   <h3 className="relative text-2xl md:text-3xl font-extrabold text-brand-ink pr-16">
@@ -77,7 +78,7 @@ export default function Projects() {
 
         <Reveal delay={200}>
           <p className="mt-12 text-center font-hand text-2xl text-brand-ink/60">
-            ...and a bunch more I couldn&apos;t list 😅
+            ...and a bunch more I couldn&apos;t list
           </p>
         </Reveal>
       </div>

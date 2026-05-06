@@ -1,4 +1,5 @@
 import { Button } from "@mantine/core";
+import { PiFileText } from "react-icons/pi";
 import { profile, contact } from "@/data/portfolio";
 import Reveal from "./Reveal";
 
@@ -8,16 +9,11 @@ export default function Hero() {
       id="about"
       className="relative overflow-hidden pt-16 pb-32 px-6 scroll-mt-20"
     >
-      <span className="absolute top-24 right-[12%] text-3xl animate-float-y" style={{ animationDelay: "0.5s" }}>✨</span>
-      <span className="absolute bottom-32 left-[8%] text-4xl animate-float-y" style={{ animationDelay: "1.5s" }}>🌸</span>
-      <span className="absolute top-1/2 right-[6%] text-3xl animate-float-y" style={{ animationDelay: "2.2s" }}>☕</span>
-      <span className="absolute bottom-44 right-[18%] text-2xl animate-spin-slow">⭐</span>
 
       <div className="relative max-w-4xl mx-auto text-center">
         <Reveal>
           <p className="font-hand text-3xl text-brand-pink -rotate-3 inline-block">
-            <span className="animate-wave inline-block mr-2">👋</span>
-            hey hey, I&apos;m
+            Hello everyone, I&apos;m
           </p>
         </Reveal>
 
@@ -52,7 +48,7 @@ export default function Hero() {
               software engineer
             </span>{" "}
             <span className="text-brand-ink/70">(frontend-focused)</span>{" "}
-            who turns ideas into clean, working interfaces — and digs into workarounds before giving up 🛠️
+            who turns ideas into clean, working interfaces — and digs into workarounds before giving up.
           </p>
         </Reveal>
 
@@ -97,7 +93,7 @@ export default function Hero() {
                 },
               }}
             >
-              📄 grab my resume
+              <PiFileText className="inline mr-2" /> grab my resume
             </Button>
             <Button
               component="a"

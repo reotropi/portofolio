@@ -1,3 +1,4 @@
+import { PiToolbox } from "react-icons/pi";
 import { skills } from "@/data/portfolio";
 import Reveal from "./Reveal";
 
@@ -57,13 +58,13 @@ export default function Skills() {
     <section id="skills" className="relative py-24 overflow-hidden bg-brand-paper scroll-mt-20">
       <div className="max-w-6xl mx-auto px-6">
         <Reveal>
-          <p className="font-hand text-3xl text-brand-violet -rotate-2 inline-block">
+          <p className="font-hand text-3xl text-brand-violet -rotate-2 inline-flex items-center gap-2">
+            <PiToolbox className="text-brand-pink" />
             ~ my toolbox ~
           </p>
           <h2 className="mt-2 text-4xl md:text-6xl font-extrabold tracking-tight">
             things I work with{" "}
-            <span className="font-hand text-brand-pink">daily</span>{" "}
-            <span className="inline-block animate-float-y">🧰</span>
+            <span className="font-hand text-brand-pink">daily</span>
           </h2>
         </Reveal>
       </div>

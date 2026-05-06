@@ -1,3 +1,4 @@
+import { PiSparkle } from "react-icons/pi";
 import Reveal from "./Reveal";
 
 const stack = [
@@ -12,12 +13,10 @@ const stack = [
 export default function Vibecode() {
   return (
     <section id="vibecode" className="relative py-20 px-6 overflow-hidden bg-brand-paper scroll-mt-20">
-      <span className="absolute top-10 right-[12%] text-3xl animate-float-y">⚡</span>
-      <span className="absolute bottom-10 left-[10%] text-3xl animate-float-y" style={{ animationDelay: "1.2s" }}>🪄</span>
-
       <div className="max-w-4xl mx-auto text-center">
         <Reveal>
-          <p className="font-hand text-3xl text-brand-pink -rotate-2 inline-block">
+          <p className="font-hand text-3xl text-brand-pink -rotate-2 inline-flex items-center gap-2">
+            <PiSparkle className="text-brand-violet" />
             ~ on the side ~
           </p>
           <h2 className="mt-2 text-4xl md:text-5xl font-extrabold tracking-tight">
@@ -38,14 +37,13 @@ export default function Vibecode() {
                   strokeLinecap="round"
                 />
               </svg>
-            </span>{" "}
-            ✨
+            </span>
           </h2>
         </Reveal>
 
         <Reveal delay={150}>
           <p className="mt-6 text-brand-ink/75 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-            to ship more features and products — don&apos;t worry, I always oversee 👀.
+            to ship more features and products — don&apos;t worry, I always oversee.
             <br />
             These are my stacks when vibecoding:
           </p>
