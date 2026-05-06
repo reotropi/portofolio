@@ -14,14 +14,8 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden py-28 px-6 bg-brand-gray-soft text-brand-ink scroll-mt-20"
+      className="relative overflow-hidden pt-28 pb-6 px-6 text-brand-ink scroll-mt-20"
     >
-      <div className="blob blob-animate bg-brand-pink -top-10 -left-10 w-72 h-72 opacity-50" />
-      <div
-        className="blob blob-animate bg-brand-purple bottom-0 right-0 w-72 h-72 opacity-50"
-        style={{ animationDelay: "3s" }}
-      />
-
       <span className="absolute top-16 right-[15%] text-3xl animate-float-y">💌</span>
       <span className="absolute bottom-24 left-[10%] text-3xl animate-float-y" style={{ animationDelay: "1.5s" }}>☕</span>
       <span className="absolute top-1/2 left-[8%] text-2xl animate-spin-slow">✨</span>
@@ -131,7 +125,7 @@ export default function Contact() {
         </Reveal>
 
         <Reveal delay={500}>
-          <p className="mt-16 text-xs text-brand-ink/50">
+          <p className="mt-40 text-xs text-brand-ink/50">
             Aida Fitryani {new Date().getFullYear()} · All rights reserved
           </p>
         </Reveal>

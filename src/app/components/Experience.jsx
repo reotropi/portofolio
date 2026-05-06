@@ -11,6 +11,15 @@ const tapeColors = ["bg-brand-violet/60", "bg-brand-pink/60", "bg-brand-purple/6
 const tilts = ["tilt-l", "tilt-r", "tilt-l"];
 const emojis = ["💼", "✈️", "🌱"];
 
+const bulletAccents = [
+  "border-brand-pink",
+  "border-brand-violet",
+  "border-brand-purple",
+  "border-brand-pink",
+  "border-brand-violet",
+  "border-brand-purple",
+];
+
 export default function Experience() {
   return (
     <section id="experience" className="relative py-24 px-6 overflow-hidden scroll-mt-20">
@@ -73,13 +82,30 @@ export default function Experience() {
                   📍 {job.location} · {job.period}
                 </p>
 
-                <ul className="mt-5 space-y-2.5 text-brand-ink/85">
-                  {job.bullets.map((b, idx) => (
-                    <li key={idx} className="flex gap-3 leading-relaxed">
-                      <span className="shrink-0 text-brand-pink font-bold">→</span>
-                      <span>{b}</span>
-                    </li>
-                  ))}
+                <ul className="mt-5 space-y-2 text-brand-ink/85">
+                  {job.bullets.map((b, idx) => {
+                    const dashIdx = b.indexOf(" — ");
+                    const hasHeadline = dashIdx !== -1;
+                    const headline = hasHeadline ? b.substring(0, dashIdx) : null;
+                    const detail = hasHeadline ? b.substring(dashIdx + 3) : b;
+                    const accent = bulletAccents[idx % bulletAccents.length];
+                    return (
+                      <li
+                        key={idx}
+                        className={`group relative pl-4 pr-3 py-2 border-l-[3px] ${accent} leading-relaxed hover:bg-white/40 transition-colors duration-200`}
+                      >
+                        {hasHeadline ? (
+                          <>
+                            <span className="font-bold text-brand-violet">{headline}</span>
+                            <span className="text-brand-pink font-bold mx-1">—</span>
+                            <span>{detail}</span>
+                          </>
+                        ) : (
+                          <span>{detail}</span>
+                        )}
+                      </li>
+                    );
+                  })}
                 </ul>
               </article>
             </Reveal>

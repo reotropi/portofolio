@@ -8,16 +8,6 @@ export default function Hero() {
       id="about"
       className="relative overflow-hidden pt-16 pb-32 px-6 scroll-mt-20"
     >
-      <div className="blob blob-animate bg-brand-pink -top-20 -left-20 w-80 h-80" />
-      <div
-        className="blob blob-animate bg-brand-purple top-10 right-0 w-72 h-72"
-        style={{ animationDelay: "2s" }}
-      />
-      <div
-        className="blob blob-animate bg-brand-rose bottom-0 left-1/3 w-72 h-72"
-        style={{ animationDelay: "4s" }}
-      />
-
       <span className="absolute top-24 right-[12%] text-3xl animate-float-y" style={{ animationDelay: "0.5s" }}>✨</span>
       <span className="absolute bottom-32 left-[8%] text-4xl animate-float-y" style={{ animationDelay: "1.5s" }}>🌸</span>
       <span className="absolute top-1/2 right-[6%] text-3xl animate-float-y" style={{ animationDelay: "2.2s" }}>☕</span>
@@ -71,7 +61,8 @@ export default function Hero() {
             <p>
               I&apos;ve been doing this for{" "}
               <span className="font-hand text-2xl text-brand-pink">7+ years</span>{" "}
-              — across teams in Singapore, Japan, and Indonesia.
+              — across teams in Singapore,{" "}
+              <span className="whitespace-nowrap">Japan, and Indonesia.</span>
             </p>
             <p>
               I love complex UI systems, real-time browser stuff (camera, mic,

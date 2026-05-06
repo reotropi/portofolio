@@ -77,7 +77,7 @@ export default function Projects() {
 
         <Reveal delay={200}>
           <p className="mt-12 text-center font-hand text-2xl text-brand-ink/60">
-            ...and a bunch more I haven&apos;t had time to write up 😅
+            ...and a bunch more I couldn&apos;t list 😅
           </p>
         </Reveal>
       </div>

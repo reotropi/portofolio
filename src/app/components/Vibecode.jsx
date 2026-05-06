@@ -46,6 +46,7 @@ export default function Vibecode() {
         <Reveal delay={150}>
           <p className="mt-6 text-brand-ink/75 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
             to ship more features and products — don&apos;t worry, I always oversee 👀.
+            <br />
             These are my stacks when vibecoding:
           </p>
         </Reveal>
