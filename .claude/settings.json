@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/ACER/Downloads/**)",
+      "Bash(npx --yes create-next-app@latest . --typescript --tailwind --app --eslint --src-dir --import-alias \"@/*\" --use-npm --no-turbopack --yes)",
+      "Bash(cp \"/c/Users/ACER/Downloads/Aida Fitryani_Frontend Engineer_Resume_Feb2026.pdf\" \"/c/Users/ACER/Desktop/portofolio/public/resume.pdf\" && ls \"/c/Users/ACER/Desktop/portofolio/public/\")"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\ACER\\Downloads"
+    ]
+  }
+}
