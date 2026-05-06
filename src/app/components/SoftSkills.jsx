@@ -25,7 +25,7 @@ export default function SoftSkills() {
                 radius={0}
                 size="xl"
                 variant="light"
-                color={i % 2 === 0 ? "teal" : "violet"}
+                color={i % 2 === 0 ? "violet" : "grape"}
                 styles={{
                   root: {
                     paddingLeft: "1rem",
